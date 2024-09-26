@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+    ViewBag.title = "Welcome2";
+}
+    <script src="~/Scripts/MyJS/UserJavaScript.js"></script> //nhúng file external js và file html,
+                                                            //bắt buộc phải để trong phần Head của file HTML
+
+<body>
+    <form name="Welcome">
+        <br />
+        <input type="text" name="txtName" value="Thủy thủ mặt trăng"
+               size="30" maxlength="50" max="30" />
+        <input type="button" name="btnWelcome" value="Welcome" 
+               onclick="DisplayWelcome(txtName.value); Homnay();"/>
+    </form>
+    <script language="javascript">
+        function DisplayWelcome(msg) {
+            alert("Hello" + msg);
+        }
+    </script> //internal js, có thể để xuống phần BODY của file HTML <==> Inline JS
+</body>
+
